@@ -83,7 +83,7 @@ test('Build should fail if REFLECT_API_KEY is not set', async (t) => {
 // })
 
 test.beforeEach(t => {
-  // sinon.stub(ReflectApi.prototype, 'executeSuite')
+  sinon.stub(ReflectApi.prototype, 'executeSuite')
 })
 
 test.afterEach(t => {
