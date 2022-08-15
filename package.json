@@ -43,6 +43,10 @@
     "ava": "cross-env FORCE_COLOR=1 ava --verbose",
     "release": "release-it"
   },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "node-fetch": "^3.2.10"
+  },
   "devDependencies": {
     "@netlify/build": "^26.5.2",
     "ava": "^4.0.0",
@@ -55,6 +59,7 @@
     "execa": "^6.0.0",
     "netlify-cli": "^9.16.2",
     "prettier": "^2.1.2",
-    "release-it": "^14.0.3"
+    "release-it": "^14.0.3",
+    "sinon": "^14.0.0"
   }
 }

@@ -1,7 +1,26 @@
-name: 'netlify-plugin-{{name}}'
-inputs: []
-# Example inputs:
-#  - name: example
-#    description: Example description
-#    default: 5
-#    required: false
+name: 'netlify-plugin-reflect'
+inputs:
+  - name: suite_id
+    description: 'The ID value displayed when viewing the Suite in Reflect.'
+    required: true
+  - name: overrides
+    description:
+      'An optional JSON blob containing overrides for this suite execution. See
+      https://reflect.run/docs/developer-api/suites-api/#execute-a-suite for
+      more information.'
+    default: ''
+    required: false
+  - name: variables
+    description:
+      'An optional JSON blob containing modified variable values for this suite
+      execution. See
+      https://reflect.run/docs/developer-api/suites-api/#execute-a-suite for
+      more information.'
+    default: ''
+    required: false
+  - name: wait_for_test_results
+    description:
+      'Waits for the test suite to complete and passes/fails this job based on
+      the results of the tests.'
+    required: false
+    default: false

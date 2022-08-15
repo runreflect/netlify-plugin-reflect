@@ -7,6 +7,9 @@
 # Use the current plugin in builds for testing and debugging.
 # Local path to the plugin.
 package = "."
+  [plugins.inputs]
+  suite_id = "netlify-tests"
+  wait_for_test_results = true
   # Plugin configuration
   #  [plugins.inputs]
   #  foo = "bar"
