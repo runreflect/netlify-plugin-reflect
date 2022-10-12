@@ -1,6 +1,6 @@
 {
   "name": "netlify-plugin-reflect",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Netlify Build plugin - Run end-to-end tests on Reflect's no-code testing platform",
   "type": "module",
   "exports": "./src/index.js",
@@ -40,8 +40,12 @@
     "lint": "npm run eslint && npm run prettier",
     "eslint": "eslint --ignore-path .gitignore --fix --cache --format=codeframe --max-warnings=0 \"{src,init}/**/*.{cjs,mjs,js}\"",
     "prettier": "prettier --ignore-path .gitignore --write --loglevel warn \"{.github,src,init}/**/*.{cjs,mjs,js,md,yml,json}\" \"*.{cjs,mjs,js,md,yml,json}\"",
-    "ava": "cross-env FORCE_COLOR=1 ava --verbose",
+    "ava": "cross-env FORCE_COLOR=1 ava --verbose --serial",
     "release": "release-it"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "node-fetch": "^3.2.10"
   },
   "devDependencies": {
     "@netlify/build": "^26.5.2",
@@ -55,6 +59,7 @@
     "execa": "^6.0.0",
     "netlify-cli": "^9.16.2",
     "prettier": "^2.1.2",
-    "release-it": "^14.0.3"
+    "release-it": "^14.0.3",
+    "sinon": "^14.0.0"
   }
 }
